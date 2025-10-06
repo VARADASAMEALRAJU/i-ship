@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevExpo - Student Project Marketplace</title>
+    <link rel="stylesheet" href="_busi.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <div class="nav">
+        <div class="brand">
+            <div class="logo">
+                <i class="fa-solid fa-chevron-left"></i>&nbsp;
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <h2>Campus Creations</h2>
+        </div>
+        <div class="opt">
+            <a href="home.html">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">PROJECTS</a>
+        </div>
+        <div class="pro-hover">
+            <span class="profile"><i class="fa-regular fa-circle-user"></i></span>
+            <div class="side-bar">
+                <a href="home.html" class="hide">Home</a>
+                <a href="home_page_iShip.html" class="hide">About</a>
+                <a href="project.html" class="hide">Projects</a>
+                <a href="">Profile</a>
+                <a href="home_login.html">Log out</a>
+             </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="welcome-section" id="welcomeSection">
+            <div class="floating-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                </svg>
+            </div>
+            <h2>Discover Amazing Student Projects</h2>
+            <p>Connect with talented developers and explore innovative projects built by students. Find your next team member or purchase ready-to-use solutions.</p>
+            <button class="start-exploring-btn" onclick="openTechModal()">Start Exploring</button>
+        </div>
+
+        <div class="projects-section" id="projectsSection" style="display: none;">
+            <div class="projects-header">
+                <h2 id="projectsTitle">Projects</h2>
+                <button class="back-btn" onclick="showWelcome()">View All Technologies</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                </div>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="techModal" onclick="closeTechModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>Choose Technology</h2>
+                <button class="close-btn" onclick="closeTechModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card" onclick="selectTechnology('React')" data-color="#61DAFB">
+                    <div class="tech-icon">⚛️</div>
+                    <h3>React</h3>
+                </div>
+                <div class="tech-card" onclick="selectTechnology('Flutter')" data-color="#02569B">
+                    <div class="tech-icon">🎯</div>
+                    <h3>Flutter</h3>
+                </div>
+                <div class="tech-card" onclick="selectTechnology('Vue.js')" data-color="#4FC08D">
+                    <div class="tech-icon">💚</div>
+                    <h3>Vue.js</h3>
+                </div>
+                <div class="tech-card" onclick="selectTechnology('Angular')" data-color="#DD0031">
+                    <div class="tech-icon">🅰️</div>
+                    <h3>Angular</h3>
+                </div>
+                <div class="tech-card" onclick="selectTechnology('Node.js')" data-color="#339933">
+                    <div class="tech-icon">🟢</div>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="tech-card" onclick="selectTechnology('Python')" data-color="#3776AB">
+                    <div class="tech-icon">🐍</div>
+                    <h3>Python</h3>
+                </div>
+                <div class="tech-card" onclick="selectTechnology('JavaScript')" data-color="#F7DF1E">
+                    <div class="tech-icon">🟨</div>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="tech-card" onclick="selectTechnology('TypeScript')" data-color="#3178C6">
+                    <div class="tech-icon">📘</div>
+                    <h3>TypeScript</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="projectModal" onclick="closeProjectModal()">
+        <div class="modal-content project-modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <div>
+                    <h2 id="projectTitle">Project Title</h2>
+                    <div class="project-header-info">
+                        <span class="tech-badge" id="projectTech">Technology</span>
+                        <div class="rating">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                            </svg>
+                            <span id="projectRating">4.8</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-btn" onclick="closeProjectModal()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="project-modal-body">
+                <div class="project-image">
+                    <img id="projectImage" src="" alt="Project Image">
+                </div>
+                
+                <div class="project-details">
+                    <div class="project-info">
+                        <h3>Project Overview</h3>
+                        <p id="projectDescription">Project description...</p>
+                        
+                        <h4>Use Case</h4>
+                        <p id="projectUseCase">Use case description...</p>
+                        
+                        <h4>Tools & Technologies</h4>
+                        <div class="tools-list" id="projectTools">
+                            </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m4,4 h16 c1.1,0 2,0.9 2,2 v12 c0,1.1 -0.9,2 -2,2 h-16 c-1.1,0 -2,-0.9 -2,-2 v-12 c0,-1.1 0.9,-2 2,-2 z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span id="projectEmail">email@example.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span id="projectPhone">+1 (555) 123-4567</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                <span id="projectGithub">github-username</span>
+                            </div>
+                        </div>
+                        
+                        <h4>Team Members</h4>
+                        <div class="team-members" id="teamMembers">
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="hire-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="m23,11 -2,-2 -2,2"></path>
+                            <path d="m21,13 v-6"></path>
+                        </svg>
+                        Hire Developers
+                    </button>
+                    <button class="buy-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        Buy Project
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script_busi.js"></script>
+</body>
+</html>

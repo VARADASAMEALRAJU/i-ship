@@ -1,0 +1,257 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins';
+    background-color: black;
+    /* overflow: hidden; */
+}
+/* .header {
+      background-color: #1A1A1A;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      height: 70px;
+} */
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 46px;
+    background: linear-gradient(to right,#6c11b6);
+    background-size: cover;
+    background-clip: text;
+    margin-top: 30px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tech-parent{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center; */
+    color:white;
+    /* gap:20px; */
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* background-color: red; */
+    /* width: 800px; */
+    overflow: hidden;
+    perspective: 200px;
+}
+.fsd-img{
+  width:80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url("./fsd-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.aws-img{
+  width:80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url("./awss.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.data-spc{
+  width:80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url("./dataspc.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.serv-now{
+  width:80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url("./servicenow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.flutt{
+  width:80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url("./flut.png!f305cw");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.vlsi-img{
+  width:80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url("./vlsi.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#tech-child a{
+  text-decoration: none;
+  color:#6c11b6;
+}
+#tech-child{
+    
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    justify-content: center;
+    align-items: center;
+    width:320px;
+    height:200px;
+    color:#6c11b6;
+    border-radius: 12px;
+    font-size: 25px;
+    /* background: linear-gradient(to bottom right,#7400b8,#6930c3,#5e60ce,#5390d9,#4ea8de);  */
+    background-color: white;
+    
+    transition: all 0.5s ease;
+     box-shadow:0px 0px 14px 1px rgb(205, 205, 205);
+    /* border: 2px solid grey; */
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.tech-child1,.tech-child4,.tech-child2,.tech-child3,.tech-child5,.tech-child6{
+  animation: movee 1s linear;
+}
+@keyframes movee
+{
+    from
+    { 
+         opacity: 0;
+         transform: translateZ(-150px);
+    }
+    to{
+      opacity: 1;
+      transform: translateZ(0px);
+    }
+}
+
+#tech-child:hover{
+    transform:translateY(-10px);
+    background-color: #6c11b6;
+    color:white;
+    box-shadow:0px 0px 14px 1px rgb(205, 205, 205);
+
+}
+#tech-child:hover a{
+  color:white;
+}
+@media (min-width:900px) and (max-width:1024px) {
+  .tech-parent{
+    margin-left: 0px;
+    margin-right: 0px;
+    
+  }
+  #tech-child{
+    width:280px;
+    height: 170px;
+    font-size: 20px;
+    
+  }
+  .fsd-img,.aws-img,.data-spc,.flutt,.serv-now,.vlsi-img{
+    width: 60px;
+    height: 60px;
+  }
+  .heading{
+     font-size: 34px;
+  }
+}
+@media (min-width:680px) and (max-width:900px) {
+  .tech-parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 800px;
+    gap:10px;
+    text-align:center;
+  }
+  #tech-child{
+    width: 280px;
+    height: 180px;
+    font-size: 22px;
+    text-align:center;
+  }
+}
+@media (min-width:550px) and (max-width:680px){
+  .tech-parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 800px;
+    gap:10px;
+    text-align: center;
+  }
+  #tech-child{
+    width: 200px;
+    height: 180px;
+    font-size: 22px;
+    text-align: center;
+  }
+}
+@media (max-width:550px){
+  .tech-parent{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 1110px;
+    gap:10px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #tech-child{
+    width:250px;
+    height:150px;
+    font-size: 20px;
+  }
+  .heading{
+    font-size: 36px;
+    text-align: center;
+  }
+  .fsd-img,.flutt,.aws-img,.data-spc,.serv-now,.vlsi-img{
+    width: 60px;
+    height: 60px;
+  }
+  .tech-child1,.tech-child3,.tech-child5{
+    animation : slideright 1s ease;
+  }
+  .tech-child2,.tech-child4,.tech-child6{
+    animation: slideleft 1s ease;
+  }
+  @keyframes slideright {
+    from{
+      opacity: 0;
+      transform: translateX(-300px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  @keyframes slideleft {
+    from{
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+}
+

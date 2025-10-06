@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+     <div class="nav">
+        <div class="brand">
+            <div class="logo">    
+                <i class="fa-solid fa-chevron-left"></i>&nbsp;
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <h2>Project Vault</h2>
+        </div>
+        <div class="opt">
+            <a href="home.html">HOME</a>
+            <a href="home_page_iShip.html">ABOUT</a>
+            <a href="events.html" style = "color:#6a0dad">PROJECTS</a>
+        </div>
+        <div class="pro-hover">
+        <span class="profile" onclick="Open()"><i class="fa-regular fa-circle-user"></i></span>
+        <div class="side-bar">
+                <a href="home.html" class="hide">Home</a>
+                <a href="home_page_iShip.html" class="hide">About</a>
+                <a href="events.html" class="hide">Projects</a>
+                <a href="">Profile</a>
+                <a href="./home_login.html">Log out</a>
+             </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="profile-card">
+            <div class="card-content">
+                <div class="profile-grid">
+                    <!-- Left Side - Profile Picture -->
+                    <div class="profile-left">
+                        <div class="avatar-container">
+                            <div class="avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Alex Johnson" class="avatar-image">
+                                <div class="avatar-fallback">AJ</div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="social-links">
+                            <a href="https://github.com/alexjohnson" target="_blank" rel="noopener noreferrer" class="social-link" data-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/in/alexjohnson" target="_blank" rel="noopener noreferrer" class="social-link" data-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect width="4" height="12" x="2" y="9"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://alexjohnson.dev" target="_blank" rel="noopener noreferrer" class="social-link" data-label="Portfolio">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 7h10v10"/>
+                                    <path d="m7 17 10-10"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Details -->
+                    <div class="profile-right">
+                        <!-- Name and Contact -->
+                        <div class="profile-header">
+                            <h1 class="profile-name">Alex Johnson</h1>
+                            
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                    <span>alex.johnson@example.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                    <span>+1 (555) 123-4567</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Collapsible Projects Section -->
+                        <div class="section-container">
+                            <button class="section-trigger" data-section="projects">
+                                <div class="section-trigger-content">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icon">
+                                        <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/>
+                                    </svg>
+                                    <span class="section-title">Uploaded Projects (3)</span>
+                                </div>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-icon">
+                                    <path d="m6 9 6 6 6-6"/>
+                                </svg>
+                            </button>
+                            <div class="section-content" id="projects-content">
+                                <div class="project-item" style="animation-delay: 0ms">
+                                    <div class="project-details">
+                                        <h4 class="project-name">E-commerce Platform</h4>
+                                        <p class="project-description">Full-stack web application with payment integration</p>
+                                        <div class="tech-stack">
+                                            <span class="tech-badge">React</span>
+                                            <span class="tech-badge">Node.js</span>
+                                            <span class="tech-badge">MongoDB</span>
+                                            <span class="tech-badge">Stripe</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://github.com/alexjohnson/ecommerce-platform" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M7 7h10v10"/>
+                                            <path d="m7 17 10-10"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="project-item" style="animation-delay: 100ms">
+                                    <div class="project-details">
+                                        <h4 class="project-name">Task Management App</h4>
+                                        <p class="project-description">Collaborative productivity tool with real-time updates</p>
+                                        <div class="tech-stack">
+                                            <span class="tech-badge">Vue.js</span>
+                                            <span class="tech-badge">Socket.io</span>
+                                            <span class="tech-badge">PostgreSQL</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://github.com/alexjohnson/task-manager" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M7 7h10v10"/>
+                                            <path d="m7 17 10-10"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="project-item" style="animation-delay: 200ms">
+                                    <div class="project-details">
+                                        <h4 class="project-name">Weather Dashboard</h4>
+                                        <p class="project-description">Interactive weather visualization with forecasting</p>
+                                        <div class="tech-stack">
+                                            <span class="tech-badge">React</span>
+                                            <span class="tech-badge">D3.js</span>
+                                            <span class="tech-badge">Weather API</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://github.com/alexjohnson/weather-dashboard" target="_blank" rel="noopener noreferrer" class="project-link">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M7 7h10v10"/>
+                                            <path d="m7 17 10-10"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Collapsible Events Section -->
+                        <div class="section-container">
+                            <button class="section-trigger" data-section="events">
+                                <div class="section-trigger-content">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icon">
+                                        <path d="M8 2v4"/>
+                                        <path d="M16 2v4"/>
+                                        <rect width="18" height="18" x="3" y="4" rx="2"/>
+                                        <path d="M3 10h18"/>
+                                    </svg>
+                                    <span class="section-title">Programs & Internships (3)</span>
+                                </div>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-icon">
+                                    <path d="m6 9 6 6 6-6"/>
+                                </svg>
+                            </button>
+                            <div class="section-content" id="events-content">
+                                <div class="event-item" style="animation-delay: 0ms">
+                                    <div class="event-details">
+                                        <div class="event-header">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="event-type-icon">
+                                                <path d="M4.5 16.5c-1.5 1.5-1.5 4 0 5.5s4 1.5 5.5 0L12 20l2 2c1.5 1.5 4 1.5 5.5 0s1.5-4 0-5.5L17 14l-5 5-5-5-2.5 2.5"/>
+                                                <path d="M14 7V2"/>
+                                                <path d="M10 7V2"/>
+                                                <path d="M8 7h8"/>
+                                            </svg>
+                                            <h4 class="event-name">iShip-1</h4>
+                                        </div>
+                                        <p class="event-description">First internship program focused on software development</p>
+                                        <div class="event-badges">
+                                            <span class="status-badge status-completed">completed</span>
+                                            <span class="type-badge">internship</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="event-item" style="animation-delay: 100ms">
+                                    <div class="event-details">
+                                        <div class="event-header">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="event-type-icon">
+                                                <path d="M4.5 16.5c-1.5 1.5-1.5 4 0 5.5s4 1.5 5.5 0L12 20l2 2c1.5 1.5 4 1.5 5.5 0s1.5-4 0-5.5L17 14l-5 5-5-5-2.5 2.5"/>
+                                                <path d="M14 7V2"/>
+                                                <path d="M10 7V2"/>
+                                                <path d="M8 7h8"/>
+                                            </svg>
+                                            <h4 class="event-name">iShip-2</h4>
+                                        </div>
+                                        <p class="event-description">Advanced internship program with enterprise projects</p>
+                                        <div class="event-badges">
+                                            <span class="status-badge status-active">active</span>
+                                            <span class="type-badge">internship</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="event-item" style="animation-delay: 200ms">
+                                    <div class="event-details">
+                                        <div class="event-header">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="event-type-icon">
+                                                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                            </svg>
+                                            <h4 class="event-name">Project Space</h4>
+                                        </div>
+                                        <p class="event-description">Collaborative workspace for innovative project development</p>
+                                        <div class="event-badges">
+                                            <span class="status-badge status-upcoming">upcoming</span>
+                                            <span class="type-badge">program</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="action-buttons">
+                            <button class="action-button action-button-primary">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 7h10v10"/>
+                                    <path d="m7 17 10-10"/>
+                                </svg>
+                                <span>Edit Profile</span>
+                            </button>
+                            <button class="action-button action-button-outline">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                                    <circle cx="12" cy="16" r="1"/>
+                                    <path d="m7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                                <span>Change Password</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

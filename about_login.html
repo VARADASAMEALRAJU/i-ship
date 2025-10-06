@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Creations</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> -->
+   <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <style>
+  
+     *
+{
+  
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body
+{
+    /* background-color: #E3F2FD;  */
+    background-color:#f5f5f5;
+    color:white;
+    margin:0px;
+}
+.nav
+{
+    width: 100%;
+    height: 50px;
+    /* border-bottom: 1px solid grey; */
+    /* background-color: rgb(219, 214, 214); */
+    background-color: white;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    /* border-bottom: 1px solid rgba(85, 81, 81, 0.3); */
+    position: sticky;
+    top:0px;
+    z-index: 999;
+}
+.nav .opt a
+{
+    /* font-family: 'Inter'; */
+    font-weight: bold;
+    /* color: rgb(174, 169, 169); */
+    color:   #6c11b6;
+    text-decoration: none;
+    font-size: 12px;
+    position: relative;
+}
+.nav .opt a::after
+{
+    content: "";
+    /* background: linear-gradient(45deg,#6a0dad,#0059ff); */
+    background: #6c11b6;
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    bottom: -5px;
+    left: 0px;
+    transition: width 0.2s linear;
+}
+.nav .opt a:hover::after
+{
+    width: 100%;
+}
+.nav .opt
+{
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    right: 200px;
+}
+.nav .brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 5%;
+}
+.nav .brand h2
+{
+    background: linear-gradient(to right,#6a0dad,#0059ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 20px;
+}
+.nav .brand .logo 
+{
+    padding: 15px;
+    background: linear-gradient(45deg,#6a0dad,#0059ff);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius:8px;
+    font-size:10px;
+    font-weight: bold;
+}
+.nav .pro-hover
+{
+    position: absolute;
+     /* right: -70px; */
+     right: 5%;
+}
+.nav .pro-hover .profile
+{
+    color:   #6c11b6;
+    cursor: pointer;
+    padding: 8px;
+}
+.nav .pro-hover .profile:hover
+{
+    background-color: #6c11b6;
+    padding: 8px;
+    border-radius:10px;
+    color: white;
+}
+.side-bar
+{
+    width: 150px;
+    height: auto;
+    /* background-color: rgb(31, 29, 29); */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 30px;
+    right: -20%;
+    border-radius:10px;
+    visibility: hidden;
+}
+.side-bar a
+{
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 20px;
+    /* color: rgb(231, 220, 220);   */
+    /* font-family: 'Inter'; */
+    color: #6c11b6;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    width: 100%;
+    border-radius: 10px;
+}
+.side-bar a:hover
+{
+    /* background-color: rgb(63, 62, 62); */
+    background-color: #6c11b6;
+    color: white;
+    /* color: rgb(18, 104, 210); */
+    /* color: #6a0dad; */
+
+}
+.pro-hover:hover .side-bar
+{
+   visibility: visible;
+}
+@media(min-width:0px) and (max-width:426px)
+{
+    .opt
+    {
+        display: none;
+        visibility: hidden;
+    }
+}
+@media(min-width:426px) and (max-width:1600px)
+{
+    .hide
+    {
+        display: none;
+    }
+}
+@media(max-width:725px)
+{
+     .opt
+    {
+        display: none;
+        visibility: hidden;
+    }
+}
+/* @media(min-width:0px) and (max-width:426px)
+{
+    
+}
+@media(min-width:426px) and (max-width:1600px)
+{
+    .hide
+    {
+        display: none;
+    }
+} */
+    .content {
+      margin-top:50px;
+      padding: 60px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+      animation: anime 1s ease both;
+      z-index: -999;
+    }
+    @keyframes anime {
+      from{
+        opacity:0;
+        transform: translateY(50px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0px);
+      }
+    }
+    .content h1{
+      font-size: 30px;
+      margin: 0;
+      font-size: 4rem;
+      font-weight: 800;
+      /* color:black; */
+      color:#6c11b6;
+    }
+    .box{
+      /* width:100%; */
+        display:flex;
+        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .first{
+        width:45%;
+        height:300px;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        margin-left:30px;
+        margin-right:30px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 30px 5px rgba(123, 47, 247, 0.3);
+        background: linear-gradient(145deg, rgba(123, 47, 247, 0.3), rgba(0, 198, 255, 0.3));
+        margin: 15px;
+        transition:all 1s ease;
+        animation: appear 0.5s ease both;
+    }
+    @keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+    .first:hover{
+      box-shadow:none;
+    }
+    .first:hover .heart{
+        width:80px ;
+        height: 80px;
+    }
+    .second{
+        width:45%;
+        height:400px;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        margin:15px;
+        gap:10px;
+    }
+    .kavala,p{
+      animation: appear2 1s ease both;
+    }
+        @keyframes appear2 {
+  from {
+    opacity: 0;
+    transform: translateX(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+/* .first {
+  animation-delay: 0.2s;
+}
+.second {
+  animation-delay: 0.4s;
+} */
+ul .one{
+  animation:anime1 0.5s ease both;
+  animation-delay: 0.4s;
+}
+ul .two{
+  animation:anime1 1s ease both;
+  animation-delay: 0.5s;
+}
+ul .three{
+  animation:anime1 1s ease both;
+  animation-delay: 0.6s;
+}
+  @keyframes anime1{
+    from{
+      opacity:0;
+      transform: translateX(-50px);
+    }
+    to{
+      opacity:1;
+      transform: translateX(0px);
+    }
+  }
+
+    .heart{
+        width:70px ;
+        height: 70px;
+        border-radius: 50%;
+        background: linear-gradient(145deg, #7B2FF7, #00C6FF); 
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        transition:all 0.2s linear;
+    }
+    .heart1{
+        width:50px ;
+        height: 50px;
+        border-radius: 10px;
+        background: linear-gradient(145deg, #7B2FF7, #00C6FF); 
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .heart i{
+        text-align:center;
+        font-size: 25px;
+    }
+    .heart1 i{
+        text-align: center;
+    }
+    li:hover{
+      color:white;
+    }
+    .flexs{
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      
+    }
+.flex_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  height: 250px;
+  border-radius: 15px;
+  /* background-color: white; */
+  background-color: #ffffff; /* clean white */
+  padding-left: 10px;
+  margin: 10px;
+  transition: transform 0.3s linear, box-shadow 1s linear;
+}
+
+.flex_box:hover div {
+  background-color: rgba(123, 47, 247, 0.3);
+}
+
+.flex_box:hover {
+  /* box-shadow: 0px 0px 5px 3px rgb(234, 222, 222); */
+  background-color: #ffffff; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  border-radius: 16px; 
+  transform: scale(1.03);
+}
+
+.flex_box:hover h3{
+  /* color:RGB(143, 0, 255); */
+  color:#6c11b6;
+}
+.flex_box div{
+  height:35px;
+  width:35px;
+  background-color:rgba(123, 47, 247, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:7px;
+  margin-bottom:20px;
+}
+.flex_box h3{
+  margin:10px 0px;
+  color:#6c11b6;
+}
+    .flex_box div i{
+      color:#7B2FF7;
+    }
+    .flex_box p{
+      /* color: #9AA9C3; */
+      color:black;
+    }
+    .second li{
+      margin-left:40px;
+    }
+    .event{
+      width:100%;
+      display:flex;
+      flex-direction: row;
+    }
+    .second_main{
+      width:50%;
+    }
+    .main_box{
+      width:50%;
+      display:flex;
+      flex-direction: column;
+      gap:15px;
+      margin-left: 50px;
+    }
+    .box1{
+      display: flex;
+      align-items: center;
+      /* justify-content: center; */
+      width:90%;
+      border-radius: 15px;
+      /* background-color: #1A1A1A; */
+      background-color:white;
+      padding:30px 15px;
+      gap:10px;
+    }
+    .trophy{
+      width:7%;
+      height:40px;
+      background-color:#6c11b6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .box1:hover{
+      border:1px solid RGB(0, 198, 255,0.2);
+      background-color: #ffffff; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  border-radius: 16px; 
+  transform: scale(1.03);
+    }
+    .box1:hover .trophy{
+      background-color:#6c11b6;
+
+      
+    }
+    /* .box1:hover div h4{
+      color:#00C6FF;
+    } */
+    .extra 
+    .extra{
+      width:95%;
+      
+    }
+    .extra p{
+      color:black;
+    }
+    .box1 div i{
+
+      color:white;
+      text-align: center;
+    }
+    .last p{
+      color:black;
+    }
+    .last {
+        box-shadow: 0px 0px 30px 5px rgba(123, 47, 247, 0.3);
+        transition: all 1s ease;
+        background-color: white;
+}
+.last:hover {
+  box-shadow: none;
+  
+}
+  @media (max-width : 725px){
+    .content{
+      top:200px;
+    }
+    .links{
+      display:none;
+    }
+    .box{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .box .first,.second{
+      width:90%;
+    }
+    .event{
+      display:flex;
+      flex-direction: column;
+    }
+    .content h1{
+      font-size: 2.5rem;
+    }
+    .flexs{
+      width:100%;
+      display:flex;
+      flex-wrap:wrap;
+
+    }
+    .opt
+    {
+        display: none;
+        visibility: hidden;
+    }
+    .flexs .flex_box{
+      width:100%;
+      height:230px;
+    }
+    .main_box{
+      display:flex;
+      flex-direction:column;
+      width:90%;
+    }
+    .box1{
+      margin-left:-40px;
+      width:100%;
+    }
+    .second_main{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width:100%;
+      
+    }
+    .margin h1{
+      font-size: 3rem;
+    }
+    .margin{
+      justify-content: center;
+      margin:0px;
+    }
+    .second_main h1{
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .second_main .center{
+      margin:10px;
+      text-align: center;
+    }
+    .second_main .tech{
+      margin-left:15px;
+      text-align: center;
+      gap:5px;
+    }
+    /* doubt */
+    .heading{
+      width:100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position:relative;
+      left:-40px;
+      
+      margin-left:100px;
+    }
+    .vision .style{
+      width:100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .last_col {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .hun{
+      width:100%;
+    }
+    
+
+  }
+  .hun{
+      width:100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .vision{
+      margin-bottom:30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+        <div class="brand">
+            <div class="logo">
+                <i class="fa-solid fa-chevron-left"></i>&nbsp;
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <h2>Project Vault</h2>
+        </div>
+        <div class="opt">
+            <a href="home_login.html">HOME</a>
+            <a href="about_login.html" style = "color:#6a0dad";>ABOUT</a>
+        </div>
+        <div class="pro-hover">
+            <span class="profile"><i class="fa-regular fa-circle-user"></i></span>
+            <div class="side-bar">
+                <a href="home.html" class="hide">Home</a>
+                <a href="about_login.html" class="hide">About</a>
+                <a href = "student.html">Student Login</a>
+                <a href = "admin.html">Admin Login</a>
+                <a href = "bussiness.html">Recruiter Login</a>
+             </div>
+        </div>
+    </div>
+    <!-- content -->
+    <div class="content">
+        <h1>Showcasing Student</h1>
+        <h1>Innovation</h1>
+        <h6 style="font-size: 15px;color: #9AA9C3;color:black;font-weight: 400;line-height: 1.6;margin-top: 15px;">A platform dedicated to celebrating the creativity, innovation, and technical excellence<br/>of our students through their remarkable project achievements.</h6>
+    </div>
+     <div class = "box">
+        <div class = "first">
+            <div class = "heart">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <h3 style = "color:#7B2FF7;">Student Innovation</h3>
+            <h5 style = "color: #9AA9C3;color:black;">Showcasing Excellence</h5>
+        </div>
+        <div class = "second">
+          <div class = "kavala" style = "display: flex;gap:10px;align-items:center;">
+            <div class = "heart1">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <h2 style = "text-align: center;color:#6c11b6;">Why we built this</h2>
+            </div>
+            <p style = "color: #9AA9C3;color:black;padding-right:30px;">We recognized that incredible student projects were being created during our college events but often remained hidden after completion. Our platform bridges this gap by creating a permanent showcase for innovation.</p>
+            <ul class = "points" style = "color: #9AA9C3;color:black;">
+                <li class = "one">Preserve and celebrate student achievements</li>
+                <br/>
+                <li class = "two">Create visibility for exceptional work</li>
+                <br/>
+                <li class = "three">Foster a culture of innovation and sharing</li>
+            </ul>
+        </div>
+     </div>
+     <div>
+      <div style = "display: flex;gap:10px;align-items:center;justify-content: center;margin-top:50px;">
+            <div class = "heart1">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <h2 style = "text-align: center;color:#6c11b6">Community Benefits</h2>
+            </div>
+      <p style = "text-align: center;color: #9AA9C3;color:black;">Our platform creates value for students, faculty, and the broader college community</p>
+     </div>
+     <!-- flex-boxesss -->
+      <div class = "flexs" style = "margin-top:50px;">
+        <div class="flex_box">
+          <div >
+            <i class="fa-regular fa-book-open"></i>
+          </div>
+          <h3>Learning Resource</h3>
+          <p>Students can learn from peer implementations and explore different approaches to problem-solving.</p>
+        </div>
+        <div class="flex_box"><div >
+            <i class="fa-regular fa-user"></i>
+          </div>
+          <h3>Collaboration Hub</h3>
+          <p>Connect with like-minded peers, find collaborators, and build upon existing project ideas.</p></div>
+        <div class="flex_box"><div >
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <h3>Recognition Platform</h3>
+          <p>Showcase achievements to potential employers, mentors, and the academic community.</p></div>
+        <div class="flex_box">
+          <div >
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3>Inspiration Engine</h3>
+          <p>Discover innovative solutions and get inspired to create your own groundbreaking projects.</p>
+        </div>
+        <div class="flex_box">
+          <div >
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3>Knowledge Sharing</h3>
+          <p>Break down silos and enable cross-disciplinary learning and knowledge exchange.</p>
+        </div>
+        <div class="flex_box">
+          <div >
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <h3>Goal Setting</h3>
+          <p>Set higher standards and goals by seeing what's possible through peer achievements.</p>
+        </div>
+      </div>
+      <!-- college_events -->
+      <div class = "event" style = "margin-top:70px;">
+          <div class = "main_box">
+          <div class = "heading" style = "display: flex;align-items:center;justify-content: center;margin-left:0px; gap:10px;">
+          <div class = "heart1">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <h1 style="color: #6c11b6;">College Events</h1>
+          </div>
+          
+            <div class = "box1">
+              <div class = "trophy">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div class = "extra">
+                <h4 style="color: #6c11b6;">Project Space</h4>
+                <p>Annual flagship project exhibition</p>
+              </div>
+            </div>
+            <div class = "box1">
+              <div class = "trophy">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <div class = "extra">
+                <h4 style="color:#6c11b6">iShip 1</h4>
+                <p>Innovation and startup incubation program</p>
+              </div>
+            </div>
+            <div class = "box1">
+              <div class = "trophy">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <div class = "extra">
+                <h4 style="color: #6c11b6;">iShip 2</h4>
+                <p>Advanced entrepreneurship challenge</p>
+              </div>
+            </div>
+          </div>
+        <div class = "second_main" style = "position:relative;top:-50px;">
+          <div  class= "margin" style = "display: flex;align-items:center;margin:50px; gap:10px;">
+            <div class = "heart1">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h1 style="color:#6c11b6;">Technologies Used</h1>
+          </div>
+          <p class = "center" style = "color:#9AA9C3;">Our students work with cutting-edge technologies across various domains, from web development to mobile apps, AI/ML, and cloud computing.</p>
+          <div class = "tech" style = "display:flex;flex-wrap: wrap;gap:10px;">
+            <p style="color: rgb(52, 52, 52);">React</p>
+            <p style="color: rgb(52, 52, 52);">Node.js</p>
+            <p style="color: rgb(52, 52, 52);">Python</p>
+            <p style="color: rgb(52, 52, 52);">JavaScript</p>
+            <p style="color: rgb(52, 52, 52);">TypeScript</p>
+            <p style="color: rgb(52, 52, 52);">MongoDb</p>
+            <p style="color: rgb(52, 52, 52);">PostgreSQL</p>
+            <p style="color: rgb(52, 52, 52);">Docker</p>
+            <br/>
+            <p style="color: rgb(52, 52, 52);">AWS</p>
+            <p style="color: rgb(52, 52, 52);">Firebase</p>
+            <p style="color: rgb(52, 52, 52);">Flutter</p>
+            <p style="color: rgb(52, 52, 52);">React Native</p>
+            <p style="color: rgb(52, 52, 52);">Vue.js</p>
+            <p style="color: rgb(52, 52, 52);">Angular</p>
+            <p style="color: rgb(52, 52, 52);">Django</p>
+          </div>
+        </div>
+      </div>
+      <!-- vision -->
+      <div class = "vision" style = "display:flex;gap:5px;align-items: center;justify-content: center;margin-top:50px;">
+          <div class = "heart1">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h2 style="color: #6c11b6;">Future Vision</h2>
+        </div>
+      <div class = "last" style = "display:flex;flex-direction:column; border-radius:10px;align-items: center;justify-content: center;width:60%;align-self: center;justify-self: center;margin-bottom:100px;padding:20px;">
+        <div>
+          <div style = "margin-bottom: 50px;">
+            <p class = "style" style = "text-align: center;display: flex;flex-wrap: wrap;align-items: center;justify-content: center;">We envision this platform evolving into a comprehensive ecosystem that not only showcases<br/> student projects but also facilitates mentorship, provides industry connections, and serves as<br/>a launchpad for student startups.</p>
+          </div>
+          <div class = "last_col" style = "display:flex;gap:20px;">
+            <div class = "hun">
+              <div style = "width:40px; height:40px;border-radius:10px;display:flex;align-items: center;justify-content: center;background-color:rgba(123, 47, 247, 0.3);">
+            <i class="fa-regular fa-user"></i>
+          </div>
+                <p style = "text-align: center;">Mentorship Network</p>
+                <p style = "text-align: center;color:#9AA9C3;">Connect students with industry professionals</p>
+            </div>
+            <div  class = "hun">
+              <div  style = "width:40px; height:40px;border-radius:10px;display:flex;align-items: center;justify-content: center;background-color:rgba(123, 47, 247, 0.3);">
+            <i class="fa-regular fa-book-open"></i>
+          </div>
+                <p style = "text-align: center;">Startup Incubator</p>
+                <p style = "text-align: center;color:#9AA9C3;">Transform projects into viable businesses</p>
+            </div>
+            <div  class = "hun">
+              <div  style = "width:40px; height:40px;border-radius:10px;display:flex;align-items: center;justify-content: center;background-color:rgba(123, 47, 247, 0.3);">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+              <p style = "text-align: center;">Global Reach</p>
+              <p style = "text-align: center;color:#9AA9C3;">Share innovations with the world wide</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

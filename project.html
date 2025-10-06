@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+    <div class="nav">
+        <div class="brand">
+            <div class="logo">
+                <i class="fa-solid fa-chevron-left"></i>&nbsp;
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <h2>Project Vault</h2>
+        </div>
+        <div class="opt">
+            <a href="home.html">HOME</a>
+            <a href="home_page_iShip.html">ABOUT</a>
+            <a href="events.html">PROJECTS</a>
+        </div>
+        <div class="pro-hover">
+            <span class="profile"><i class="fa-regular fa-circle-user"></i></span>
+            <div class="side-bar">
+                <a href="home.html" class="hide">Home</a>
+                <a href="home_page_iShip.html" class="hide">About</a>
+                <a href="events.html" class="hide">Projects</a>
+                <a href="">Profile</a>
+                <a href="home_login.html">Log out</a>
+             </div>
+        </div>
+    </div>
+
+
+    <h1 style="color:  #6c11b6;text-align: center;margin:50px;font-size:3rem;">TOP PROJECTS</span></h1>
+    <div class="carousel">
+        <div class="carousel-inner" id="carouselInner"></div>
+        <div class="carousel-controls">
+        <button onclick="prevSlide()">❮</button>
+        <button onclick="nextSlide()">❯</button>
+        </div>
+  </div>
+
+
+
+
+   <div class="main">
+     <button id="all" onclick="show()">See all Projects</button>
+   </div>
+   
+
+   <div class="divs">
+     <div class="one">
+        <a href="objective.html" style="text-decoration: none;">
+            <div class="one1">
+                <img src="./div1.jpg">
+                <div class="matter">
+                    <h3>Expense Tracker</h3>
+                    <p>AI-powered mood tracking and mental wellness companion...</p>
+                    <div class="tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                    </div>
+                </div> 
+            </div>
+        </a>
+        <div class="one1">
+             <img src="./div2.jpg">
+             <div class="matter">
+                <h3>TaskFlow</h3>
+                <p>AI-powered mood tracking and mental wellness companion...</p>
+                 <div class="tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Javascript</span>
+                </div>
+            </div> 
+        </div>
+        <div class="one1">
+             <img src="./div3.jpg">
+             <div class="matter">
+                <h3>TaskFlow</h3>
+                <p>AI-powered mood tracking and mental wellness companion...</p>
+                 <div class="tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Javascript</span>
+                </div>
+            </div> 
+        </div>
+        <div class="one1">
+             <img src="./div4.jpg">
+             <div class="matter">
+                <h3>TaskFlow</h3>
+                <p>AI-powered mood tracking and mental wellness companion...</p>
+                <div class="tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Javascript</span>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="one">
+        <div class="one1">
+            <img src="./div1.jpg">
+             <div class="matter">
+                <h3>TaskFlow</h3>
+                <p>AI-powered mood tracking and mental wellness companion...</p>
+                 <div class="tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Javascript</span>
+                </div>
+            </div> 
+        </div>
+        <div class="one1">
+             <img src="./div2.jpg">
+             <div class="matter">
+                <h3>TaskFlow</h3>
+                <p>AI-powered mood tracking and mental wellness companion...</p>
+                 <div class="tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Javascript</span>
+                </div>
+            </div> 
+        </div>
+        <div class="one1">
+             <img src="./div3.jpg">
+             <div class="matter">
+                <h3>TaskFlow</h3>
+                <p>AI-powered mood tracking and mental wellness companion...</p>
+                 <div class="tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Javascript</span>
+                </div>
+            </div> 
+        </div>
+        <div class="one1">
+             <img src="./div4.jpg">
+             <div class="matter">
+                <h3>TaskFlow</h3>
+                <p>AI-powered mood tracking and mental wellness companion...</p>
+                <div class="tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Javascript</span>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+   </div>
+
+    <script>
+        function show()
+        {
+            var d = document.getElementsByClassName('divs')[0];
+            d.style.display = 'block';
+            // for(let i=0;i<d.length;i++)
+            // {
+            //     d[i].style.visibility = 'visible';
+            // }
+        }
+
+        const top3 = [
+      {
+        title: "FitTrack Pro",
+        description: "Advanced fitness tracking with AI-powered insights...",
+        image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=400&fit=crop"
+      },
+      {
+        title: "CryptoWallet X",
+        description: "Secure cryptocurrency wallet with multi-chain support...",
+        image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop"
+      },
+      {
+        title: "MoodBoost AI",
+        description: "AI-powered mood tracking and mental wellness companion...",
+        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop"
+      }
+    ];
+
+    const carouselInner = document.getElementById("carouselInner");
+    let currentIndex = 0;
+
+    function renderCarousel() {
+      carouselInner.innerHTML = top3.map((project, i) => `
+        <div class="carousel-slide" style="transform: translateX(-${currentIndex * 100}%);">
+          <img src="${project.image}" alt="${project.title}">
+          <div class="carousel-caption">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % top3.length;
+      renderCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + top3.length) % top3.length;
+      renderCarousel();
+    }
+
+    setInterval(nextSlide, 4000);
+    renderCarousel();
+
+    </script>
+</body>
+</html>

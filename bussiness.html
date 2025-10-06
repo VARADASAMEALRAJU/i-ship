@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Register</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="project.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head> 
+<body>
+  <header>
+    <div class="logo">
+        <div class="nav">
+        <div class="brand">
+            <div class="logo">
+                <i class="fa-solid fa-chevron-left"></i>&nbsp;
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <h2>Project Vault</h2>
+        </div>
+        <div class="opt">
+            <a href="home_login.html">HOME</a>
+            <a href="about_login.html">ABOUT</a>
+            <!-- <a href="#">PROJECTS</a> -->
+        </div>
+        <div class="pro-hover">
+            <!-- <span class="profile"><i class="fa-regular fa-circle-user"></i></span> -->
+             <span style="color: white;font-size: 14px;background-color: blue;border-radius: 10px;" class="profile">Login</span>
+            <div class="side-bar">
+                <!-- <span class="close-but" onclick="Close()">&times;</span> -->
+                <a href="home_login.html" class="hide">Home</a>
+                <a href="about_login.html" class="hide">About</a>
+                <!-- <a href="" class="hide">Projects</a> -->
+                <!-- <a href="">Profile</a> -->
+                <a href="./student.html" >Student Login</a>
+                <a href="./admin.html">Admin Login</a>
+                <a href="./bussiness.html">Business Login</a>
+                <!-- <a href="">Log out</a> -->
+             </div>
+        </div>
+    </div>
+    <nav class="navigation">
+    <button class="btnLogin-popup">Login</button>
+    </nav>
+  </header>
+  <video autoplay muted loop playsinline class="bg-video">
+  <source src="ani.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+  <div class="wrapper">
+    <span class="icon-close">&times;</span>
+
+    <!-- Login Form -->
+    <div class="form-box Login">
+      <h2 id="form-heading">Login as Recruiter</h2>
+      <form id="loginForm" onsubmit="loginsave(event)">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" id="t4" required>
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" id="t5" required>
+          <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox" required> Remember Me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="login-register">
+          <p>Don't have an account? <a href="#" class="register-link" onclick="switchToRegister()">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="form-box register">
+      <h2 id="form-heading">Register as Recruiter</h2>
+      <form id="registerForm" onsubmit="savedata(event)">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input type="text" id="t1" required>
+          <label>Username</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" id="t2" required>
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" id="t3" required>
+          <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox" required> I agree to terms & conditions</label>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <div class="login-register">
+          <p>Already have an account? <a href="#" class="login-link" onclick="switchToLogin()">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="22.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ <script>
+  
+ </script>
+</body>
+</html>
